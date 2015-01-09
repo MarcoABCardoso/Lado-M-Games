@@ -77,8 +77,8 @@ public class GameManager : MonoBehaviour {
 			if (timer <= 0) {
 				timer = 0;
 				certo = false;
-				Destroy(Carta1.GetComponent<BoxCollider2D>());
-				Destroy(Carta2.GetComponent<BoxCollider2D>());
+				DestroyImmediate(Carta1);
+				DestroyImmediate(Carta2);
 				Carta1 = null;
 				Carta2 = null;
 			}
