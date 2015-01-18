@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{A5CE967B-8968-221C-C5AC-68A47688BF03}") = "Jogo da Memória", "Assembly-CSharp.csproj", "{4C408B6B-419D-7091-3C2C-0CB50603EFC8}"
+Project("{21373A2E-5509-8D0D-5B66-A53861A82230}") = "Jogo da Memória", "Assembly-CSharp.csproj", "{38C22231-835E-232E-6B53-A0B2008F1F23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C408B6B-419D-7091-3C2C-0CB50603EFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C408B6B-419D-7091-3C2C-0CB50603EFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C408B6B-419D-7091-3C2C-0CB50603EFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C408B6B-419D-7091-3C2C-0CB50603EFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C22231-835E-232E-6B53-A0B2008F1F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C22231-835E-232E-6B53-A0B2008F1F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C22231-835E-232E-6B53-A0B2008F1F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C22231-835E-232E-6B53-A0B2008F1F23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-		GlobalSection(MonoDevelopProperties) = preSolution
+																																													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

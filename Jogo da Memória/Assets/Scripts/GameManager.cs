@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 	// Classe com uma unica instancia, que controla os aspectos mais gerais do jogo
@@ -10,12 +11,21 @@ public class GameManager : MonoBehaviour {
 	float timer; // Temporizador, faz com que eventos demorem para acontecer
 	bool errado; // As cartas encontradas nao formam par
 	bool certo; // As cartas encontradas formam par
-
-
+	
+	
+	
+	
+	
+	
+	
+	
 	// Use this for initialization
 	void Start () {
 		timer = 0;
 	}
+	
+	
+	
 	
 	// Update is called once per frame
 	void Update () {
@@ -35,6 +45,8 @@ public class GameManager : MonoBehaviour {
 				errado = true;
 			}
 		}
+		
+		
 
 		/**************************************************
 		 * Procedimento em caso de erro:
@@ -71,6 +83,7 @@ public class GameManager : MonoBehaviour {
 		 * -Abre os espaços Carta1 e Carta2
 		 * FALTA INCLUIR OUTROS EVENTOS NESSA PARTE!!
 		 **************************************************/
+		 
 		if (certo) {
 			// Implementar aqui procedimento ao encontrar um par. Por enquanto, so deixa as cartas viradas para sempre
 			timer -= Time.deltaTime;

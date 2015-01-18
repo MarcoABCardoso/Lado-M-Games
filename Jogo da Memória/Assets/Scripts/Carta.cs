@@ -4,22 +4,15 @@ using System.Collections;
 public class Carta : MonoBehaviour {
 	// Classe que representa as cartas do jogo da memoria
 
-	GameObject GameManager;
+	public GameObject GameManager;
 	public int Numero; // Numero indica a qual par a carta pertence
-
-
-
 
 	// Use this for initialization
 	void Start () {
-		GameManager = GameObject.Find("Game Manager");
+		GameManager = GameObject.Find("GameManager");
 	}
 	
-	// Update is called once per frame
-	void Update () {
 	
-	}
-
 	public void OnMouseDown () {
 		/****************************************************************************************************
 		 * Procedimento em caso de clique sobre carta:
