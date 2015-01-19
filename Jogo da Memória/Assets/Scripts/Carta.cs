@@ -25,7 +25,8 @@ public class Carta : MonoBehaviour {
 			GameManager.GetComponent<GameManager>().Carta1 = gameObject;
 			GetComponent<Animator>().SetTrigger("Vira");
 		}
-		else if (GameManager.GetComponent<GameManager>().Carta2 == null) {
+		else if (GameManager.GetComponent<GameManager>().Carta2 == null 
+			&& gameObject.Equals(GameManager.GetComponent<GameManager>().Carta1) == false){
 			GameManager.GetComponent<GameManager>().Carta2 = gameObject;
 			GetComponent<Animator>().SetTrigger("Vira");
 		}

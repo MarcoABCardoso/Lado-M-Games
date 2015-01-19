@@ -12,19 +12,12 @@ public class GameManager : MonoBehaviour {
 	bool errado; // As cartas encontradas nao formam par
 	bool certo; // As cartas encontradas formam par
 	
-	
-	
-	
-	
-	
-	
+	public GameObject player;
 	
 	// Use this for initialization
 	void Start () {
 		timer = 0;
 	}
-	
-	
 	
 	
 	// Update is called once per frame
