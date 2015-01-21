@@ -46,16 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Memory2Scripts\Card.cs" />
-     <Compile Include="Assets\Memory2Scripts\GameSettings.cs" />
-     <Compile Include="Assets\Memory2Scripts\Grid.cs" />
-     <Compile Include="Assets\Memory2Scripts\Layout.cs" />
-     <Compile Include="Assets\Memory2Scripts\Playmat.cs" />
-     <Compile Include="Assets\Memory2Scripts\Slot.cs" />
-     <Compile Include="Assets\MemoryScripts\ClickController.cs" />
-     <Compile Include="Assets\MemoryScripts\Logic.cs" />
-     <Compile Include="Assets\MemoryScripts\MemoryCard.cs" />
-     <Compile Include="Assets\MemoryScripts\Shuffle.cs" />
      <Compile Include="Assets\Scripts\Carta.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GerarCartas.cs" />
