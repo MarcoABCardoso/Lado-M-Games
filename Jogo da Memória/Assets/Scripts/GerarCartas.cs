@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class GerarCartas : MonoBehaviour
 {
 
-		public Vector3 PosicaoInicial = new Vector3 ();
-		public int espacamentoX = 3;
-		public int espacamentoY = 4;
+		public Vector3 PosicaoInicial = new Vector3 (-6.5f, 3.5f, 0);
+		public float espacamentoX = 2.5f;
+		public float espacamentoY = 3;
 		public int cartasx = 2;
 		public int cartasy = 3;
 		public GameObject parent;
