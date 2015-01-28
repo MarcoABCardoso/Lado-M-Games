@@ -14,6 +14,7 @@ public class Carta : MonoBehaviour {
 	
 	
 	public void OnMouseDown () {
+		audio.Play();
 		/****************************************************************************************************
 		 * Procedimento em caso de clique sobre carta:
 		 * 

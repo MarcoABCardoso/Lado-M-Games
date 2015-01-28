@@ -40,6 +40,7 @@
 -define:ENABLE_PROFILER
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_OSX
+'Assets/Scripts/BotaoJogar.cs'
 'Assets/Scripts/Carta.cs'
 'Assets/Scripts/GameManager.cs'
 'Assets/Scripts/GerarCartas.cs'
