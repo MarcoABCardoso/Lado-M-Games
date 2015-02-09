@@ -7,7 +7,11 @@ public class GameManager : MonoBehaviour {
 	GameObject Cartas; // GameObject que contem todas as cartas
 	public GameObject Carta1; // Primeira carta virada
 	public GameObject Carta2; // Segunda carta virada
+	GameObject Sombra; // Um retangulao na frente que serve pra escurecer a tela
+	public GUISkin MyGUI;
 
+	string descriçao = "Feministeia e uma pessoa mto top seriao linda ela luta por direitos like crazy";
+	string nome = "Feministeia Daorerson";
 	float timer; // Temporizador, faz com que eventos demorem para acontecer
 	bool errado; // As cartas encontradas nao formam par
 	bool certo; // As cartas encontradas formam par
@@ -17,6 +21,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		Sombra = GameObject.Find("Sombra");
 		timer = 0;
 	}
 	
@@ -81,11 +86,12 @@ public class GameManager : MonoBehaviour {
 		//int vert = Carta1.GetComponent<Carta>().Numero;
 		 
 		if (certo) {
-			// Implementar aqui procedimento ao encontrar um par. Por enquanto, so deixa as cartas viradas para sempre
 			timer -= Time.deltaTime;
+			Sombra.GetComponent<SpriteRenderer>().color = new Color(0,0,0,(1f-timer)/2f);
+			Sombra.GetComponent<BoxCollider2D>().enabled = true;
 			if (timer <= 0) {
 				timer = 0;
-				certo = false;
+				//certo = false;
 				audio.Play();
 				//Instantiate(Carta1.GetComponent<Carta>().Explosao, Carta1.transform.position, Carta1.transform.rotation);
 				DestroyImmediate(Carta1);
@@ -94,6 +100,26 @@ public class GameManager : MonoBehaviour {
 				Carta1 = null;
 			}
 			//Application.LoadLevel(2);
+		}
+	}
+
+	void OnGUI () {
+
+		MyGUI.label.fontSize = Screen.height*1/20;
+		MyGUI.button.fontSize = Screen.height*1/20;
+		MyGUI.textArea.fontSize = Screen.height*1/20;
+		GUI.skin = MyGUI;
+
+		if (certo) {
+			// name = DEPENDE DO NUMERO DAS CARTAS
+			// descriçao = TAMBEM DEPENDE
+			GUI.Label (new Rect (Screen.width*5/8, Screen.height*1/4 - timer*500, Screen.width, Screen.height), nome);
+			GUI.TextArea (new Rect (0, Screen.height*1/2 + timer*500, Screen.width, Screen.height*1/2), descriçao);
+			if (GUI.Button (new Rect (Screen.width*3/8, Screen.height*3/8, Screen.width*1/4, Screen.width*1/16), "AMO/SOU")) {
+				certo = false;
+				Sombra.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+				Sombra.GetComponent<BoxCollider2D>().enabled = true;
+			}
 		}
 	}
 	
