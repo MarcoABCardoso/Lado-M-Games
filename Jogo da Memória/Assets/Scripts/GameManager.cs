@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
 			timer = 1;
 			if (Carta1.GetComponent<Carta>().Numero == Carta2.GetComponent<Carta>().Numero) {
 				certo = true;
+				audio.Play();
 			}
 			else {
 				errado = true;
@@ -91,8 +92,6 @@ public class GameManager : MonoBehaviour {
 			Sombra.GetComponent<BoxCollider2D>().enabled = true;
 			if (timer <= 0) {
 				timer = 0;
-				//certo = false;
-				audio.Play();
 				//Instantiate(Carta1.GetComponent<Carta>().Explosao, Carta1.transform.position, Carta1.transform.rotation);
 				DestroyImmediate(Carta1);
 				//Instantiate(Carta2.GetComponent<Carta>().Explosao, Carta2.transform.position, Carta2.transform.rotation);
