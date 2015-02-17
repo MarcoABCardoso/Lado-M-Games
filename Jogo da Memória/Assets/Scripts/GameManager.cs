@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour {
 
 	string descriçao = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.";
 	string nome = "Fulana Beltrana";
-	string corrente = "Feminismo Feminista";
+	string corrente1 = "Feminismo";
+	string corrente2 = "Contitucionalizante";
 	float timer; // Temporizador, faz com que eventos demorem para acontecer
 	bool errado; // As cartas encontradas nao formam par
 	bool certo; // As cartas encontradas formam par
@@ -120,8 +121,17 @@ public class GameManager : MonoBehaviour {
 			// name = DEPENDE DO NUMERO DAS CARTAS
 			// descriçao = TAMBEM DEPENDE
 			GUI.skin.font = FonteTitulo;
-			GUI.Label (new Rect (Screen.width*5/8, Screen.height*1/4 - timer*500, Screen.width, Screen.height), corrente);
-			GUI.Label (new Rect (Screen.width*3/16, Screen.height*1/4 - timer*500, Screen.width, Screen.height), nome);
+			float aux = MyGUI.label.CalcSize(new GUIContent(corrente1)).x;
+			GUI.Label (new Rect (Screen.width*5/8, Screen.height*1/8 - timer*500, Screen.width, Screen.height), corrente1);
+			MyGUI.label.fontSize = 1;
+			while (MyGUI.label.CalcSize(new GUIContent(corrente2)).x < aux) {
+				MyGUI.label.fontSize += 1;
+			}
+			GUI.skin = MyGUI;
+			GUI.Label (new Rect (Screen.width*5/8, Screen.height*1/8 + aux/2 - timer*500, Screen.width, Screen.height), corrente2);
+
+			MyGUI.label.fontSize = Screen.height*1/20;
+			GUI.Label (new Rect (Screen.width*3/16, Screen.height*1/8 - timer*500, Screen.width, Screen.height), nome);
 			if (timer == 0 && GUI.Button (new Rect (Screen.width*3/8, Screen.height*3/8, Screen.width*1/4, Screen.width*1/16), "Continuar")) {
 				certo = false;
 				Sombra.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);

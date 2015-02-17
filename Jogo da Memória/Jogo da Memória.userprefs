@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/CoisasCaindo.cs" Line="31" Column="52" />
-      <File FileName="Assets/Scripts/GerarCartas.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="108" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="132" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
