@@ -24,8 +24,9 @@ public class GameManager : MonoBehaviour {
 	bool errado; // As cartas encontradas nao formam par
 	bool certo; // As cartas encontradas formam par
 	bool continuar;
+	bool acabou; // Acabou o jogo
+	int cont = 0;
 	
-	//int cont = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -116,7 +117,10 @@ public class GameManager : MonoBehaviour {
 			if (timer < 0) {
 				timer = 0;
 			}
-			//Application.LoadLevel(2);
+		}
+		
+		else if (acabou){
+			Application.LoadLevel(2);
 		}
 	}
 
@@ -143,14 +147,18 @@ public class GameManager : MonoBehaviour {
 			MyGUI.label.fontSize = Screen.height*1/20;
 			GUI.Label (new Rect (Screen.width*3/16, Screen.height*1/8 - timer*500, Screen.width, Screen.height), nome);
 			if (timer == 0 && GUI.Button (new Rect (Screen.width*3/8, Screen.height*3/8, Screen.width*1/4, Screen.width*1/16), "Continuar")) {
+				cont++;
 				certo = false;
 				Sombra.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
 				Sombra.GetComponent<BoxCollider2D>().enabled = true;
-				//Instantiate(Carta1.GetComponent<Carta>().Explosao, Carta1.transform.position, Carta1.transform.rotation);
 				DestroyImmediate(Carta1);
-				//Instantiate(Carta2.GetComponent<Carta>().Explosao, Carta2.transform.position, Carta2.transform.rotation);
 				DestroyImmediate(Carta2);
 			}
+			if(cont == 6){
+				acabou = true;
+			}
+				
+			
 			GUI.skin.font = FonteTexto;
 			GUI.TextArea (new Rect (0, Screen.height*1/2 + timer*500, Screen.width, Screen.height*1/2), descriçao);
 		}
