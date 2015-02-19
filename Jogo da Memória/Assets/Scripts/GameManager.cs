@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class GameManager : MonoBehaviour {
 	// Classe com uma unica instancia, que controla os aspectos mais gerais do jogo
@@ -11,11 +12,14 @@ public class GameManager : MonoBehaviour {
 	public GUISkin MyGUI;
 	public Font FonteTitulo;
 	public Font FonteTexto;
+	public TextAsset Textos;
 
+	string[] pacotes;
+	string[] linhas;
 	string descriçao = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.";
 	string nome = "Fulana Beltrana";
 	string corrente1 = "Feminismo";
-	string corrente2 = "Contitucionalizante";
+	string corrente2 = "loucao";
 	float timer; // Temporizador, faz com que eventos demorem para acontecer
 	bool errado; // As cartas encontradas nao formam par
 	bool certo; // As cartas encontradas formam par
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Sombra = GameObject.Find("Sombra");
+		pacotes = Regex.Split(Textos.text, "\n\r\n\r\n");
 		timer = 0;
 	}
 	
@@ -44,6 +49,11 @@ public class GameManager : MonoBehaviour {
 				certo = true;
 				timer = 2;
 				audio.Play();
+				// Define os textos
+				linhas = Regex.Split(pacotes[Carta1.GetComponent<Carta>().Numero-1],"\n\r\n");
+				corrente1 = linhas[0];
+				descriçao = linhas[1];
+				nome = linhas[2];
 			}
 			else {
 				errado = true;
@@ -81,8 +91,7 @@ public class GameManager : MonoBehaviour {
 		 * 
 		 * Verifica se o procedimento esta em curso (certo = true)
 		 * Reduz o timer
-		 * Quando o timer vai abaixo de zero:
-		 * -Crava ele no zero
+		 * Quando o timer vai abaixo de zero:* -Crava ele no zero
 		 * -Termina o processo
 		 * -Deleta hitboxes (cliques sobre as cartas nao funcionam mais)
 		 * -Abre os espaços Carta1 e Carta2
@@ -92,6 +101,7 @@ public class GameManager : MonoBehaviour {
 		//int vert = Carta1.GetComponent<Carta>().Numero;
 		 
 		if (certo) {
+
 			if (timer > 0) {
 				timer -= Time.deltaTime;
 			}
@@ -114,22 +124,22 @@ public class GameManager : MonoBehaviour {
 
 		MyGUI.label.fontSize = Screen.height*1/20;
 		MyGUI.button.fontSize = Screen.height*1/20;
-		MyGUI.textArea.fontSize = Screen.height*1/20;
+		MyGUI.textArea.fontSize = Screen.height*1/30;
 		GUI.skin = MyGUI;
 
 		if (certo) {
-			// name = DEPENDE DO NUMERO DAS CARTAS
-			// descriçao = TAMBEM DEPENDE
+
 			GUI.skin.font = FonteTitulo;
 			float aux = MyGUI.label.CalcSize(new GUIContent(corrente1)).x;
 			GUI.Label (new Rect (Screen.width*5/8, Screen.height*1/8 - timer*500, Screen.width, Screen.height), corrente1);
+			/*
 			MyGUI.label.fontSize = 1;
 			while (MyGUI.label.CalcSize(new GUIContent(corrente2)).x < aux) {
 				MyGUI.label.fontSize += 1;
 			}
 			GUI.skin = MyGUI;
 			GUI.Label (new Rect (Screen.width*5/8, Screen.height*1/8 + aux/2 - timer*500, Screen.width, Screen.height), corrente2);
-
+			*/
 			MyGUI.label.fontSize = Screen.height*1/20;
 			GUI.Label (new Rect (Screen.width*3/16, Screen.height*1/8 - timer*500, Screen.width, Screen.height), nome);
 			if (timer == 0 && GUI.Button (new Rect (Screen.width*3/8, Screen.height*3/8, Screen.width*1/4, Screen.width*1/16), "Continuar")) {
