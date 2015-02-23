@@ -64,19 +64,18 @@ public class GameManager : MonoBehaviour {
 					descriçao2 = "\tLinda é professora de Filosofia na faculdade de Hunter nos Estados Unidos. Além de dar palestras sobre a importância do feminismo cultural em diversas universidades da Ivy League (conjunto de universidades americanas prestigiadas), ela também escreveu uma série de livros focados na identidade social de gênero, raça, política e violência sexual.";
 				}
 				if (Carta1.GetComponent<Carta>().Numero == 3) {
-					corrente1 = "Feminismo";
-					corrente2 = "Liberal";
-					descriçao1 = "\tO feminismo liberal acredita na igualdade de gênero, e não na superioridade de um sexo em relação ao outro. Como uma das principais diferenças em relação a outras vertentes do feminismo, está o fato de que as feministas liberais não vêm os homens como inimigos, mas sim como possíveis aliados na luta pela igualdade de gênero. O movimento acredita que a igualdade das mulheres em relação aos homens na sociedade partiria do respeito deles em relação às atitudes e escolhas delas.\n\tEntre as causas pelas quais luta o feminismo liberal, está o fim da discriminação acadêmica e profissional em relação às mulheres, mudanças legislativas que garantam igualdade de direitos em relação aos homens diante do Estado, o fim do assédio sexual e da violência doméstica, entre outros tópicos.";
-					nome = "Betty Friedan";
-					descriçao2 = "\tBetty Friedan foi a autora da obra “A Mística Feminina”, um dos livros de cabeceira do movimento feminista. Betty analisou o papel das mulheres no sistema capitalista, depois de perceber que muitas mulheres, quando restritas às tarefas domésticas, passavam a desenvolver transtornos psicológicos, como a depressão.";
-				}
-				if (Carta1.GetComponent<Carta>().Numero == 4) {
 					corrente1 = "Transfeminismo";
 					corrente2 = "";
 					descriçao1 = "\tO transfeminismo é uma vertente voltada para o debate e a luta contra a opressão heteronormativa da sociedade, ou seja, que diz respeito às questões da transgeneridade. Assim como as outras, esta vertente se pauta na libertação da mulher dos grilhões patriarcais, mas presta uma atenção especial às mulheres que nem sempre são tratadas como tais simplesmente por possuírem aspectos físicos que seriam “indignos” de uma mulher “real” (por não possuírem uma vagina ou seios, por exemplo).\n\tGrande parte da luta transfeminista está em desconstruir a transfobia intrínseca à sociedade moderna e garantir os direitos das mulheres trans* de serem tratadas de forma digna e condizente com o que se sentem mais confortáveis.";
 					nome = "Sylvia Rae Rivera";
 					descriçao2 = "\tSylvia foi uma travesti americana que militou pelo transfeminismo nos anos 60, tendo como marco de sua militância sua participação nos conflitos de Stonewall (conjunto manifestações e embates violentos entre a militância gay e trans* com a polícia de Nova Iorque). Rivera também é responsável pela criação da fundação Street Transvestite (S.T.A.R.), dedicada a ajudar jovens travestis moradoras de rua.";
-
+				}
+				if (Carta1.GetComponent<Carta>().Numero == 4) {
+					corrente1 = "Feminismo";
+					corrente2 = "Liberal";
+					descriçao1 = "\tO feminismo liberal acredita na igualdade de gênero, e não na superioridade de um sexo em relação ao outro. Como uma das principais diferenças em relação a outras vertentes do feminismo, está o fato de que as feministas liberais não vêm os homens como inimigos, mas sim como possíveis aliados na luta pela igualdade de gênero. O movimento acredita que a igualdade das mulheres em relação aos homens na sociedade partiria do respeito deles em relação às atitudes e escolhas delas.\n\tEntre as causas pelas quais luta o feminismo liberal, está o fim da discriminação acadêmica e profissional em relação às mulheres, mudanças legislativas que garantam igualdade de direitos em relação aos homens diante do Estado, o fim do assédio sexual e da violência doméstica, entre outros tópicos.";
+					nome = "Betty Friedan";
+					descriçao2 = "\tBetty Friedan foi a autora da obra “A Mística Feminina”, um dos livros de cabeceira do movimento feminista. Betty analisou o papel das mulheres no sistema capitalista, depois de perceber que muitas mulheres, quando restritas às tarefas domésticas, passavam a desenvolver transtornos psicológicos, como a depressão.";
 				}
 				if (Carta1.GetComponent<Carta>().Numero == 5) {
 					corrente1 = "Feminismo";
