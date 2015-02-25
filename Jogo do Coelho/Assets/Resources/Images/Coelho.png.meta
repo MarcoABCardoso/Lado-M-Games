@@ -1,6 +1,12 @@
 fileFormatVersion: 2
 guid: 96e9d9460d9d34748913894f1a2dbede
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Corpo
+    21300002: "Cabe\xE7a"
+    21300004: Orelha
+    21300006: "P\xE9"
+    21300008: Rabo
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

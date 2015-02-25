@@ -3,17 +3,18 @@ using System.Collections;
 
 public class CameraScript : MonoBehaviour {
 
-	public GameObject player;
-	private Vector3 offset;
+	public Transform Coelho;
+	Vector3 offset;
 	
 	void Start(){
-		
-		offset = transform.position;
-		
+
+		Coelho = GameObject.Find("Coelho").transform;
+		offset = new Vector3 (2, 2, 0);
 	}
 	
-	void LateUpdate(){
+	void Update(){
 		
-		transform.position = player.transform.position + offset;
+		transform.position += (Coelho.position-transform.position+offset)*Time.deltaTime;
+		transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
 	}
 }
