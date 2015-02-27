@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Cogumelos : MonoBehaviour {
 
-	void OnTriggerEnter (Collider other) {
-		Destroy(gameObject.collider);
+	void OnTriggerEnter2D (Collider2D other) {
+		Destroy(gameObject);
 	}
 }
