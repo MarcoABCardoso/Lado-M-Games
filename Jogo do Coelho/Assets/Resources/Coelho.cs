@@ -8,37 +8,46 @@ public class Coelho : MonoBehaviour {
 	KeyCode PULO = KeyCode.UpArrow;
 
 	bool noChao;
+	int pulos; //conta os pulos
 
 
-	// Use this for initialization
+	void OnCollisionEnter2D(Collision2D other){
+		//Checa se está no chão
+		noChao = true;
+		Debug.Log("ta no chão");
+	
+	}
+	
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
+	
+		
 
 		// Checa se esta no chao
-		Debug.Log(rigidbody2D.velocity);
-		//if (rigidbody2D.velocity.y == 0f) {
-			noChao = true;
-		//}
-		//else {
-		//	noChao = false;
-		//}
+		
 
 		if (noChao && Input.GetKeyDown(PULO)) {
-			rigidbody2D.velocity += new Vector2 (0f,4.5f);
+			rigidbody2D.velocity += new Vector2 (0f,4.1f);
+			pulos++;
+			if(pulos==2){
+				pulos = 0;
+				noChao = false;
+			}
+			
 		}
 		if (!noChao) {
 
 		}
-		if (noChao && Input.GetKey(DIREITA)) {
+		if  (Input.GetKey(DIREITA)) {
 			rigidbody2D.velocity = new Vector2 (5f, rigidbody2D.velocity.y);
 			GetComponent<Animator>().SetBool("Correndo", true);
 			transform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));
 		}
-		else if (noChao && Input.GetKey(ESQUERDA)) {
+		else if (Input.GetKey(ESQUERDA)) {
 			rigidbody2D.velocity = new Vector2 (-5f, rigidbody2D.velocity.y);
 			GetComponent<Animator>().SetBool("Correndo", true);
 			transform.rotation = Quaternion.Euler(new Vector3(0f,180f,0f));

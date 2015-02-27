@@ -40,7 +40,6 @@
 -define:ENABLE_PROFILER
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_OSX
-'Assets/Cogumelos.cs'
 'Assets/Resources/CameraScript.cs'
 'Assets/Resources/Cenouras.cs'
 'Assets/Resources/Coelho.cs'
