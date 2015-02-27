@@ -4,12 +4,11 @@ using System.Collections;
 public class CameraScript : MonoBehaviour {
 
 	public Transform Coelho;
-	Vector3 offset;
+	public Vector3 offset = new Vector3 (2,2,0);
 	
 	void Start(){
 
 		Coelho = GameObject.Find("Coelho").transform;
-		offset = new Vector3 (2, 2, 0);
 	}
 	
 	void Update(){
