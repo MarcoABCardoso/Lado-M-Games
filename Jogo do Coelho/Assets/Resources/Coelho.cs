@@ -28,7 +28,7 @@ public class Coelho : MonoBehaviour {
 		//}
 
 		if (noChao && Input.GetKeyDown(PULO)) {
-			rigidbody2D.velocity += new Vector2 (0f,5f);
+			rigidbody2D.velocity += new Vector2 (0f,4.5f);
 		}
 		if (!noChao) {
 
