@@ -15,6 +15,6 @@ public class CameraScript : MonoBehaviour {
 	void Update(){
 		
 		transform.position += (Coelho.position-transform.position+offset)*Time.deltaTime;
-		transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+		transform.position = new Vector3(transform.position.x, Coelho.transform.position.y + 1.8f, -10f);
 	}
 }

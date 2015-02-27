@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Coelho.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/CameraScript.cs">
     <Files>
-      <File FileName="Assets/CameraScript.cs" Line="18" Column="3" />
-      <File FileName="Assets/Coelho.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/CameraController.cs" Line="18" Column="3" />
+      <File FileName="Assets/Resources/CameraScript.cs" Line="23" Column="91" />
+      <File FileName="Assets/Resources/Coelho.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
