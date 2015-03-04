@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Coelho2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/Audio.cs">
     <Files>
-      <File FileName="Assets/Coelho2.cs" Line="15" Column="55" />
+      <File FileName="Assets/TaNaCerca.cs" Line="17" Column="13" />
+      <File FileName="Assets/Resources/Scripts/Audio.cs" Line="31" Column="80" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

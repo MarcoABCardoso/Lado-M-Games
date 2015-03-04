@@ -34,7 +34,7 @@
 			if (noChao && Input.GetKeyDown(PULO)) {
 				GetComponent<Rigidbody2D>().velocity += new Vector2 (0f,4.1f);
 				pulos++;
-				if(pulos==1){
+				if(pulos==1 ){
 					pulos = 0;
 					noChao = false;
 				}

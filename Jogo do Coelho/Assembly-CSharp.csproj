@@ -46,14 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Coelho2.cs" />
-     <Compile Include="Assets\Resources\Coelho.cs" />
      <Compile Include="Assets\Resources\Scripts\Audio.cs" />
      <Compile Include="Assets\Resources\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Cenouras.cs" />
      <Compile Include="Assets\Resources\Scripts\Cerca.cs" />
+     <Compile Include="Assets\Resources\Scripts\Coelho.cs" />
      <Compile Include="Assets\Resources\Scripts\Cogumelos.cs" />
-     <Compile Include="Assets\Resources\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\TaNaCerca.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
