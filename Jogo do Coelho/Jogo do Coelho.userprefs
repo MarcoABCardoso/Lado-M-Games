@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CenouraTexto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/TaNaCerca2.cs">
     <Files>
-      <File FileName="Assets/CenouraTexto.cs" Line="19" Column="20" />
+      <File FileName="Assets/Resources/Scripts/TaNaCerca2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Scripts/Cenouras.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Scripts/Audio.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

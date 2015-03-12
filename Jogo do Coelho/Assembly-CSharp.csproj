@@ -46,9 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CenouraTexto.cs" />
      <Compile Include="Assets\Resources\Scripts\Audio.cs" />
      <Compile Include="Assets\Resources\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\CenouraTexto.cs" />
      <Compile Include="Assets\Resources\Scripts\Cenouras.cs" />
      <Compile Include="Assets\Resources\Scripts\Cerca.cs" />
      <Compile Include="Assets\Resources\Scripts\Coelho.cs" />
