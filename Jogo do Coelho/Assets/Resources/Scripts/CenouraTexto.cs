@@ -4,7 +4,6 @@ using System.Collections;
 public class CenouraTexto : MonoBehaviour {
 
 	public GameObject GameManager;
-	public GameObject coelho;
 	public Texture2D preto; //nem é mais preto (é branco) mas eu tenho medo de mudar o nome disso e alguma coisa dar errado
 	
 	
@@ -23,6 +22,8 @@ public class CenouraTexto : MonoBehaviour {
 		else if (GameManager.GetComponent<GameManager>().texto == true){
 			GameManager.GetComponent<GameManager>().texto = false;
 		}
+		
+		Destroy(gameObject);
 		
 		
 	}
