@@ -6,7 +6,7 @@ public class BotaoJogar : MonoBehaviour {
 	//Isso é pra ir pro jogo quando você clica em 'jogar'
 	
 	public void OnMouseDown () {
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 		Application.LoadLevel(1);
 	}
 	

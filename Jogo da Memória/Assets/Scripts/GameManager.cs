@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
 			if (Carta1.GetComponent<Carta>().Numero == Carta2.GetComponent<Carta>().Numero) {
 				certo = true;
 				timer = 2;
-				audio.Play();
+				GetComponent<AudioSource>().Play();
 				// Define os textos
 				if (Carta1.GetComponent<Carta>().Numero == 1) {
 					corrente1 = "Feminismo";

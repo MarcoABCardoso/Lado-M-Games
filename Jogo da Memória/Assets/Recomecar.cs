@@ -4,7 +4,7 @@ using System.Collections;
 public class Recomecar : MonoBehaviour {
 
 	public void OnMouseDown () {
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 		Application.LoadLevel(0);
 	}
 }

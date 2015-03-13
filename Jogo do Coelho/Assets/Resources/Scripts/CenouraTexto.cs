@@ -3,28 +3,32 @@ using System.Collections;
 
 public class CenouraTexto : MonoBehaviour {
 
+	public GameObject GameManager;
 	public GameObject coelho;
-	bool retangulo = false; //o retângulo com texto em cima do coelho
 	public Texture2D preto; //nem é mais preto (é branco) mas eu tenho medo de mudar o nome disso e alguma coisa dar errado
 	
 	
+	void Start(){
+		GameManager = GameObject.Find("Game Manager");
+	
+	}
+	
+	
 	void OnTriggerEnter2D(Collider2D other){
-		retangulo = true;
+		if(GameManager.GetComponent<GameManager>().texto == false) {
+			GameManager.GetComponent<GameManager>().preto = preto;
+			GameManager.GetComponent<GameManager>().texto = true;
+		}
+		
+		else if (GameManager.GetComponent<GameManager>().texto == true){
+			GameManager.GetComponent<GameManager>().texto = false;
+		}
+		
 		
 	}
 	
 	
-	void OnGUI(){
-		if(retangulo){
-			GUI.Box (new Rect(coelho.transform.localPosition.x, 60,200,70),"\n TEXTO");
-			GUI.skin.box.normal.background = preto;
-			GUI.skin.box.normal.textColor = Color.black;
-			
-			GUI.skin.box.border = new RectOffset();
-			Debug.Log("textoo");
-			
-		}	
-	}
+
 	
 	
 }

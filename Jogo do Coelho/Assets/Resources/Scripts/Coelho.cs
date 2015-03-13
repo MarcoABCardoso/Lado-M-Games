@@ -19,14 +19,8 @@
 			
 		}
 		
-		void Start () {
-			
-		}
-		
 		
 		void Update () {
-			
-			
 			
 			// Checa se esta no chao
 			

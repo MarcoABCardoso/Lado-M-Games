@@ -5,11 +5,11 @@ public class TirarSom : MonoBehaviour {
 
 	public void OnMouseDown () {
 		
-		if(audio.isPlaying){
-			audio.Stop();
+		if(GetComponent<AudioSource>().isPlaying){
+			GetComponent<AudioSource>().Stop();
 		}
 		else{
-			audio.Play();
+			GetComponent<AudioSource>().Play();
 		}
 		
 		

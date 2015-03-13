@@ -53,6 +53,7 @@
      <Compile Include="Assets\Resources\Scripts\Cerca.cs" />
      <Compile Include="Assets\Resources\Scripts\Coelho.cs" />
      <Compile Include="Assets\Resources\Scripts\Cogumelos.cs" />
+     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
      <Compile Include="Assets\Resources\Scripts\TaNaCerca.cs" />
      <Compile Include="Assets\Resources\Scripts\TaNaCerca2.cs" />
  <Reference Include="UnityEngine.UI">
