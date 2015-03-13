@@ -11,7 +11,8 @@ public class CenouraMusica : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		musica.GetComponent<AudioSource>().pitch =- 0.8f;
+		musica.GetComponent<AudioSource>().pitch = musica.GetComponent<AudioSource>().pitch - 0.2f;
+		Destroy(gameObject);
 		
 	}
 }
